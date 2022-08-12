@@ -1,4 +1,4 @@
-                    //--------desafio complementario-----//
+
                     //--quiero hacer un carrito de compras--//
 
 let ingresarUsuario = prompt ("Buen dia, ingrese su usuario para comenzar");
@@ -10,23 +10,21 @@ if ((ingresarUsuario =="")||(ingresarPassword =="")){
     alert ("Buen dia" + " " + ingresarUsuario)
 }
 
-/* aca  me suma los productos que ingrese el usuario pero al no tener precio, no se pueden sumar con valor numerico.//
+//una de las funciones esenciales del proceso a simular//
 
 let producto1 = prompt ("detalla el producto que queres");
 let producto2 = prompt ("detalla el producto que queres");
 let producto3 = prompt ("detalla el producto que queres");
-let producto4 = prompt ("detalla el producto que queres");
 let suma=0;
-suma = producto1+" "+producto2+" "+producto3+" "+producto4;
+suma = producto1+" "+producto2+" "+producto3;
 console.log (suma);
 alert ("tu compra total comprende:" + suma);
 let montoTotal = 10000 //debiera ser la suma del monto de los productos ingresados//
 alert ("el monto total de tu compra es:" + (montoTotal))
 
                             //--------ARRAY---------// 
-                            //-DESAFIO COMPLEMENTARIO-//
-*/
-const productos = [{
+//objetos:
+const productos = [{ 
     nombre: "alfombra",
     precio: 500,
     disponibles: 10
@@ -47,10 +45,10 @@ alert ("detalla a continuacion los productos que prefieras y si no se encuentran
 const listaUsuario = [];
 let cantidad = 3;
 do{
-    let lista = prompt ("ingresa un producto");
+    let lista = prompt ("ingresa un producto").toLowerCase();
     listaUsuario.push (lista);
     console.log (listaUsuario.length);
 }   while (listaUsuario.length != cantidad);
 const nuevaLista = listaUsuario.concat([""]);
 alert (nuevaLista.join("\n"));
-alert ("A la brevedad nos estremos contactando para coordinar la entrega!");
+alert ("A la brevedad nos estaremos contactando para coordinar la entrega!");

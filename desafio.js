@@ -52,3 +52,20 @@ do{
 const nuevaLista = listaUsuario.concat([""]);
 alert (nuevaLista.join("\n"));
 alert ("A la brevedad nos estaremos contactando para coordinar la entrega!");
+
+            // desafio eventos (del mouse, capturando el click sobre el producto que quiere agregar al carrito) // 
+
+let boton = document.getElementById("btnMainAlmohadon")
+boton.onclick = () => {console.log("Click")}
+
+
+/*      PORQUE NO ME PERMITE REGISTRAR EL CLICK EN TODOS LOS BOTONES?//
+
+let boton = document.getElementById("btnMainJuguetes")
+boton.onclick = () => {console.log("Click")}
+
+let boton = document.getElementById("btnMainTejidos")
+boton.onclick = () => {console.log("Click")}
+
+
+// evento formulario en html de consultas: //

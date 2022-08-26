@@ -10,40 +10,42 @@
 <body>
         <h1>Bienvenido a Elvira Juguetes</h1>
         <h3>Tu lugar para crear y disfrutar!</h3>
-        <p>Estas en la seccion de compras! a continuacion veras los productos seleccionados !! </p>
+        <p>Estas en la seccion de compras! </p>
         
-        <div class="row">
-            
-                <div class="card" style="width: 300px;">
-                    <img src="/almohadon.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+        <div id="catalogo"  class="row">
+<!--                <div class="card" style="width: 300px;">
+                <img src="/almohadon.webp" class="card-img-top" alt="...">
+                <div class="card-body">
                     <h5 class="card-title">Almohadon</h5>
-                    <p class="card-text">precio $800. Disponibles:10. </p>
+                    <p class="card-text">precio $800.</p>
                     <button id="btnMainAlmohadon" href="#" class="btn btn-primary">Agregar a mi pedido</button>
-                    </div>
                 </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="/madera-martillo.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="/madera-martillo.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
                     <h5 class="card-title">juguetes</h5>
-                    <p class="card-text">precio $500. Disponibles:10.</p>
+                    <p class="card-text">precio $500.</p>
                     <button id="btnMainJuguetes" href="#" class="btn btn-primary">Agregar a mi pedido</button>            
                 </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="/tejido mate.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="/tejido mate.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
                     <h5 class="card-title">Tejidos</h5>
-                    <p class="card-text">precio $300. Disponibles:20. </p>
-                    <button id="btnMainTejidos" href="#" class="btn btn-primary">Agregar a mi pedido</button>            
-
-
+                    <p class="card-text">precio $300.</p>
+                    <button id="btnMainTejidos" href="#" class="btn btn-primary">Agregar a mi pedido</button>
                 </div>
-                </div>            
-        </div>    
+            </div>   -->         
+        </div> 
+        <H3 id="precioTotal">Carrito</H3>
+        <h4> Total de mi compra: $</h4>   
+        <p>Aquí veras los productos seleccionados !! </p>
+        <div id="carrito" class="row"></div>
 
+    <script src="entrega2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>   
-    <script src="desafio.js"></script>
+    
 </body>
 </html>
 

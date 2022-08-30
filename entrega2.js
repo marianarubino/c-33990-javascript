@@ -1,17 +1,6 @@
 
-                    //ingreso usuario //
 
-let ingresarUsuario = prompt ("Buen dia, ingrese su usuario para comenzar");
-let ingresarPassword = prompt ("Ingrese su contrasena para ingresar");
-
-if ((ingresarUsuario =="")||(ingresarPassword =="")){
-    alert("Ups! ingresa tu usuario o contrasena por favor");   
-} else {
-    alert ("Buen dia" + " " + ingresarUsuario); 
-}
-                    // buscr como utilizar las img del html!!!!! -------------- // 
 //   arreglo de productos: objetos 
-
 const productos = [
     {
       id: 1,
@@ -128,3 +117,44 @@ const productos = [
   mostrarCatalogo();
   
   console.log(productoCatalogoHTML(productos[0]));
+
+
+/* opcion 1 no me anda el parse 
+let ingresarUsuario = prompt ("Buen dia, ingrese su usuario para comenzar");
+localStorage.setItem ('usuario', 'json.stringify(ingresarUsuario)');
+console.log(typeof(ingresarUsuario))
+
+ingresarUsuario=JSON.parse ((localStorage.getItem("usuario"))); 
+console.log (ingresarUsuario);
+console.log(typeof(ingresarUsuario))
+
+
+
+const ingresarUsuario = prompt ("Buen dia, ingrese su usuario para comenzar");
+const enJSON = JSON.stringify(ingresarUsuario);
+
+console.log (enJSON);
+console.log (typeof ingresarUsuario);
+console.log (typeof enJSON);
+
+localStorage.setItem ("ingresarUsuario" , enJSON);
+
+const usuarioEnLS = localStorage.getItem("IngresarUsuario") || '';
+
+if (!usuarioEnLS) {
+    const ingresarUsuario = prompt ("Buen dia, ingrese su usuario para comenzar")
+    localStorage.setItem("ingresarUsuario", ingresarUsuario);
+    console.log(ingresarUsuario);
+    console.log(typeof ingresarUsuario);
+}
+*/
+
+const usuarioEnLS = localStorage.getItem("ingresarUsuario") || '';
+
+if (!usuarioEnLS) {
+  const ingresarUsuario = prompt("Buen dia, ingrese su usuario para comenzar")
+  localStorage.setItem("ingresarUsuario", ingresarUsuario);
+  console.log(ingresarUsuario);
+  console.log(typeof ingresarUsuario);
+}
+

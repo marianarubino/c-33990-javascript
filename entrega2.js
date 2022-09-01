@@ -1,6 +1,6 @@
 
 
-//   arreglo de productos: objetos 
+
 const productos = [
     {
       id: 1,
@@ -119,35 +119,7 @@ const productos = [
   console.log(productoCatalogoHTML(productos[0]));
 
 
-/* opcion 1 no me anda el parse 
-let ingresarUsuario = prompt ("Buen dia, ingrese su usuario para comenzar");
-localStorage.setItem ('usuario', 'json.stringify(ingresarUsuario)');
-console.log(typeof(ingresarUsuario))
-
-ingresarUsuario=JSON.parse ((localStorage.getItem("usuario"))); 
-console.log (ingresarUsuario);
-console.log(typeof(ingresarUsuario))
-
-
-
-const ingresarUsuario = prompt ("Buen dia, ingrese su usuario para comenzar");
-const enJSON = JSON.stringify(ingresarUsuario);
-
-console.log (enJSON);
-console.log (typeof ingresarUsuario);
-console.log (typeof enJSON);
-
-localStorage.setItem ("ingresarUsuario" , enJSON);
-
-const usuarioEnLS = localStorage.getItem("IngresarUsuario") || '';
-
-if (!usuarioEnLS) {
-    const ingresarUsuario = prompt ("Buen dia, ingrese su usuario para comenzar")
-    localStorage.setItem("ingresarUsuario", ingresarUsuario);
-    console.log(ingresarUsuario);
-    console.log(typeof ingresarUsuario);
-}
-*/
+// guardado de datos en local storage / JSON. 
 
 const usuarioEnLS = localStorage.getItem("ingresarUsuario") || '';
 
@@ -158,3 +130,25 @@ if (!usuarioEnLS) {
   console.log(typeof ingresarUsuario);
 }
 
+// sweetAlert: asociado a boton:
+
+const btn = document.querySelector('#btnEntrega') 
+btn.addEventListener ('click', () => {
+  Swal.fire({
+    title: 'Coordinar entrega?',
+    text: "Se generará tu pedido!",
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Si, coordinar entrega!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Pedido enviado!',
+        'A la brevedad nos contactaremos.',
+        'success'
+      )
+    }
+  })
+})

@@ -1,6 +1,4 @@
 
-
-
 const productos = [
     {
       id: 1,
@@ -152,3 +150,20 @@ btn.addEventListener ('click', () => {
     }
   })
 })
+
+const pedirPosts = async () => {
+  const post = document.getElementById("posts");
+  const resp = await fetch("https://jsonplaceholder.typicode.com/photos");
+  const data = await resp.json();
+
+  data.forEach((post) => {
+      const li = document.createElement("li");
+      li.innerHTML = `
+          <h4>${post.title}</h4>
+          <p>${post.body}</p>
+       `; 
+      posts.append(li);  
+  });
+};
+pedirPosts ();
+

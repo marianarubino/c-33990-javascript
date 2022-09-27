@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    list-style: none;
+    text-decoration: none;
+}
+.encabezado{
+    margin: 25px;
+}
+    
+
+#otrosProductos {
+    display: flex;
+    flex-direction:row;
+    justify-content: center; 
+    align-items:stretch ;}
+    #otrosProductos img{ 
+    width: 18rem;
+    height: 18rem; 
+}

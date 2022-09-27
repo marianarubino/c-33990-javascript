@@ -130,7 +130,7 @@ const productos = [
 
                                     // FIN DEL CARRITO //
 
-// BOTON DE COORDINAR ENTREGA (me reemplaza este codigo por el de abajo):
+// BOTON DE COORDINAR ENTREGA:
 
 const btn = document.getElementById("entrega") 
   btn.addEventListener ('click', () => {
